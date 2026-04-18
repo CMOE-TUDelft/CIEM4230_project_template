@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{style.tex}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\huge\bfseries\sffamily CIEM4230: Floating and Submerged Structures\par}
+    \vspace{0.75cm}
+    {\Large\sffamily Project Report Template\par}
+    \vspace{1.25cm}
+    {\large\itshape Replace every placeholder with project-specific outcomes and analysis. Do not keep placeholder text in the submitted report.\par}
+    \vspace{2cm}
+    \begin{tabular}{ll}
+        \textbf{Project title:} & [Insert project title] \\
+        \textbf{Group number:} & [Insert group number] \\
+        \textbf{Student names:} & [Insert names and student numbers] \\
+        \textbf{Submission date:} & \today \\
+    \end{tabular}
+    \vfill
+    {\large\sffamily TU Delft -- Civil Engineering and Geosciences\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+\section*{How to Use This Template}
+\instructionplaceholder{Template use}{Keep the main report within 25--35 pages, move bulky calculations and raw outputs to appendices, and ensure each major claim is supported by a figure, table, calculation, or cited source.}
+
+\instructionplaceholder{Assessor view}{Each section below is linked to one or more module learning objectives. Your final report should let an assessor verify, quickly and unambiguously, what you decided, why you decided it, how you analysed it, and what evidence supports the decision.}
+
+\instructionplaceholder{Restricted Use of Generative AI}{The use of Generative AI tools (for example Copilot, ChatGPT, and Gemini) is restricted in this course report for the following activities:
+\begin{itemize}
+    \item Generating design calculations, engineering checks, or numerical outputs without performing and understanding the underlying analysis yourself.
+    \item Producing full report sections, argumentation, or conclusions intended to demonstrate your own technical reasoning.
+    \item Producing data analysis outputs, reliability interpretations, or risk conclusions without independent verification.
+    \item Producing complete sections of code intended for submission without understanding, testing, and validating the implementation.
+\end{itemize}
+Students remain fully responsible for all submitted content. If AI is used in any restricted context for this graded deliverable, the \textbf{acknowledgement (mandatory)} in this template must be completed with specific use, resulting output, and verification/adaptation details.}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section*{Executive Summary}
+% Rubric Checklist: One-page maximum summary of concept, governing conditions, key performance outcomes, uncertainty statement, and recommendation.
+\instructionplaceholder{Executive summary evidence}{Write this last. In one page, state the design problem, the selected floating or submerged concept, the governing metocean conditions, the dominant technical risks, the main performance conclusions, and the final recommendation. Include only results that are defended later in the report.}
+
+\input{chapters/01_design_basis_metocean.tex}
+\input{chapters/02_concept_lifecycle.tex}
+\input{chapters/03_mooring_design.tex}
+\input{chapters/04_numerical_modelling.tex}
+\input{chapters/05_probabilistic_assessment.tex}
+\input{chapters/06_stakeholders_ethics.tex}
+\input{chapters/07_concept_evaluation.tex}
+
+\section*{References}
+\instructionplaceholder{Reference practice}{Insert only sources actually used in the report. Prioritise standards, lecture material, journal papers, authoritative datasets, and software or code references that materially support your methods and conclusions.}
+
+\newpage
+\appendix
+
+\section{Appendix A: Extended Calculations and Model Definitions}
+\instructionplaceholder{Appendix use}{Move derivations, supplementary equations, model parameter tables, and expanded reliability calculations here when they interrupt the technical flow of the main report. Keep enough cross-referencing that the reader can connect appendix material back to the main argument.}
+
+\section{Appendix B: Numerical Output and Convergence Evidence}
+\instructionplaceholder{Appendix use}{Place long code listings, solver settings, validation checks, mesh or time-step sensitivity studies, and large result sets here. The main report should only show the plots and numbers needed to support decisions.}
+
+\section{Appendix C: Stakeholder and Ethics Support Material}
+\instructionplaceholder{Appendix use}{Place interview notes, debate preparation material, stakeholder matrices, and longer ethical comparison tables here if they are too detailed for the main report. Keep the main section focused on argumentation and decision logic.}
+
+\section*{Acknowledgement of AI Use}
+\instructionplaceholder{AI declaration policy}{Use this section whenever AI use is restricted or prohibited for any graded deliverable. Place it at the end of the report (or as an attachment). State clearly which tools were used, for which purposes, and how outputs were checked and adapted. You remain fully responsible for all submitted content.}
+
+\textbf{AI use acknowledgement (mandatory)}
+\begin{itemize}
+    \item I acknowledge the use of [tool name and link] to support the development of this assessment by: [Select one or more: Explaining concepts, Refining language, Assisting with programming and debugging, Acting as a brainstorming partner, Providing feedback, Other (please specify)].
+    \item Specific use: [Describe exactly where AI was used in this report, for example section drafting support, code debugging, equation checks, language editing, or structuring arguments.]
+    \item Resulting output: [State the concrete outputs produced with AI support, for example Table X, Figure Y caption revision, code block in Appendix B, or rewritten paragraph in Section Z.]
+    \item Verification and adaptation: [Explain what was checked, corrected, or replaced by the authors before submission, including references, calculations, and engineering judgement applied.]
+\end{itemize}
+
+
+\end{document}

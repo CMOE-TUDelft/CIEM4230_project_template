@@ -1,0 +1,17 @@
+.github/
+.instruction_docs/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+*.zip
+*.tar.gz
+*.rar
