@@ -16,6 +16,8 @@
 % Rubric Checklist: Numerical modelling approach (5%); Numerical analysis (5%); Numerical and advanced dynamic assessment (5%).
 \instructionplaceholder{Unified chapter logic}{This chapter combines the modelling approach, numerical analysis, and advanced dynamic assessment into one coherent workflow. The reader should be able to follow the path from conceptual model, to numerical implementation, to engineering interpretation without jumping across chapters.}
 
+\subsection{Model definition}
+
 \subsubsection{Assumptions and scope boundaries}
 \instructionplaceholder{Required evidence}{List physical assumptions and scope limits. State what is included, what is excluded, expected impact of each simplification, and the operational range for which your model is intended.}
 
@@ -57,23 +59,23 @@
 \subsubsection{Algorithm design and code structure}
 \instructionplaceholder{Required evidence}{Describe the computational pipeline, key functions/modules, and reproducibility setup. Include the sequence of assembly, load application, time stepping, and post-processing. Highlight efficiency choices and any extensions beyond the lecture notebooks. Code should be added as a link to an open github repository or Jupyter notebook and not included in the main report.}
 
-\subsection{Numerical verification}
+\subsubsection{Numerical verification}
 \instructionplaceholder{Required evidence}{Summarise verification outcomes for the implemented FEM model: consistency checks, benchmark comparisons against literature data, and error trends that justify the credibility of the final simulations.}
 
-\subsection{Convergence and time-step assessment}
+\subsubsection{Convergence and time-step assessment}
 \instructionplaceholder{Required evidence}{Provide mesh (spatial) and time-step sensitivity analysis. Quantify numerical uncertainty and justify the selected discretisation levels used for all reported final results.}
 
 \subsection{Dynamic response assessment}
 \instructionplaceholder{Required evidence}{Report the dynamic response results needed for design judgement. These may include motions, accelerations, internal forces, mooring loads, modal properties, hydroelastic response, or other quantities relevant to the concept. Interpret the results, identify governing cases, and state clearly what the model can and cannot be trusted to predict.}
 
-\subsection{Modal analysis}
+\subsubsection{Modal analysis}
 \instructionplaceholder{Required evidence}{Identify natural frequencies and mode shapes of the assembled structural model. Relate dominant modes to expected forced-response characteristics under wave and current loading. Compare computed natural frequencies with literature values where available.}
 
-\subsection{Dynamic response of the structure}
+\subsubsection{Dynamic response of the structure}
 \instructionplaceholder{Required evidence}{Present the dynamic response at key locations under the operating conditions specified in the project description. Include time histories, frequency spectra, and maximum response estimates as appropriate. Discuss the physical interpretation of the results.}
 
-\subsection{Reduced-order model response}
+\subsubsection{Reduced-order model response}
 \instructionplaceholder{Required evidence}{Apply the reduced-order model using a selection of relevant mode shapes. Compare the reduced-order response against the full-model solution and discuss the accuracy and efficiency of the reduction.}
 
-\subsection{Limitations and improvements}
+\subsubsection{Limitations and improvements}
 \instructionplaceholder{Required evidence}{State model limitations and propose concrete improvements to geometry, loading fidelity, boundary conditions, or numerical schemes for future work.}
