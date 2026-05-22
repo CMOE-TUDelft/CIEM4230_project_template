@@ -14,16 +14,66 @@
 \pagecheck{8--9}
 
 % Rubric Checklist: Numerical modelling approach (5%); Numerical analysis (5%); Numerical and advanced dynamic assessment (5%).
-\instructionplaceholder{Unified chapter logic}{This chapter combines the old modelling approach, numerical analysis, and advanced dynamic assessment into one coherent workflow. The reader should be able to follow the path from conceptual model, to numerical implementation, to engineering interpretation without jumping across chapters.}
+\instructionplaceholder{Unified chapter logic}{This chapter combines the modelling approach, numerical analysis, and advanced dynamic assessment into one coherent workflow. The reader should be able to follow the path from conceptual model, to numerical implementation, to engineering interpretation without jumping across chapters.}
 
-\subsection{Conceptual model definition}
+\subsubsection{Assumptions and scope boundaries}
+\instructionplaceholder{Required evidence}{List physical assumptions and scope limits. State what is included, what is excluded, expected impact of each simplification, and the operational range for which your model is intended.}
+
+\subsubsection{Geometry and system definition}
+\instructionplaceholder{Required evidence}{Define the 3D model geometry and all major components: (multiple) tunnel and mooring representation. State dimensions, reference coordinates, and parameter sources used for the project definition.}
+
+\subsubsection{Conceptual model definition}
 \instructionplaceholder{Required evidence}{Describe the structural idealisation used for the problem. State the bodies, beams, rods, springs, masses, damping terms, hydrodynamic representations, and boundary conditions included in the model. Explain why this abstraction captures the physics that matter for the design question.}
+
+\subsubsection{Environmental loading model}
+\instructionplaceholder{Wave loading}{Describe the wave loading approach. Baseline: linear wave theory (Airy waves) for regular waves and Morison force (inertia and drag terms, including added mass and added damping). Extension for maximum grade: irregular waves.}
+
+\instructionplaceholder{Current loading}{Describe the current loading approach.}
 
 \subsection{Governing equations and numerical method}
 \instructionplaceholder{Required evidence}{Present the equations of motion or the governing numerical formulation at a level appropriate for a technical report. State which solution method is used, how loading is applied, and what assumptions are made about linearity, coupling, damping, and time or frequency domain treatment.}
 
+\subsubsection{Finite Element formulation for the structural system}
+\instructionplaceholder{Required evidence}{Describe the discretisation of each structural domain (tunnel, mooring). Detail interpolation functions, weak form derivation, element stiffness/mass/damping matrices, assembly procedure, and boundary conditions. Justify element types and approximation spaces for the expected dynamic range. }
+
+\subsubsection{Finite Element space and shape functions}
+\instructionplaceholder{Required evidence}{Define the FE function spaces used for each field variable. Present the shape functions explicitly, specify their continuity requirements, and link these choices to the governing equations derived in Section 4.1.}
+
+\subsubsection{Weak form and loading terms}
+\instructionplaceholder{Required evidence}{Derive the weak form of the governing equations for the assembled system. Show explicitly how wave loading (Morison force) and current force enter the discrete loading vector. If time-dependent loading is implemented, show how it is incorporated.}
+
+\subsubsection{Boundary conditions}
+\instructionplaceholder{Required evidence}{State all essential (Dirichlet) and natural (Neumann) boundary conditions. Explain how mooring spring/damper terms and sea-bed fixity are applied at the element level or as additional degrees of freedom.}
+
+\subsubsection{Discretization justification and alternatives}
+\instructionplaceholder{Required evidence}{For each major discretization choice, state why it was selected, one credible alternative, and the expected trade-off in accuracy, robustness, or computational cost.}
+
 \subsection{Implementation and verification}
 \instructionplaceholder{Required evidence}{Explain how the method is implemented in Python, Matlab, or another platform. State what was checked to verify the implementation, such as unit checks, limiting-case comparisons, convergence studies, or comparison to analytical solutions. The code itself can be moved to an appendix.}
 
+\subsubsection{Time integration and solver settings}
+\instructionplaceholder{Required evidence}{State time-stepping methods, stability constraints (e.g.\ Courant number, critical time step), solver tolerances, and convergence criteria. Explain why the selected scheme is appropriate for the structural dynamics of the SFT, taking into account the relevant natural frequencies.}
+
+\subsubsection{Algorithm design and code structure}
+\instructionplaceholder{Required evidence}{Describe the computational pipeline, key functions/modules, and reproducibility setup. Include the sequence of assembly, load application, time stepping, and post-processing. Highlight efficiency choices and any extensions beyond the lecture notebooks. Code should be added as a link to an open github repository or Jupyter notebook and not included in the main report.}
+
+\subsection{Numerical verification}
+\instructionplaceholder{Required evidence}{Summarise verification outcomes for the implemented FEM model: consistency checks, benchmark comparisons against literature data, and error trends that justify the credibility of the final simulations.}
+
+\subsection{Convergence and time-step assessment}
+\instructionplaceholder{Required evidence}{Provide mesh (spatial) and time-step sensitivity analysis. Quantify numerical uncertainty and justify the selected discretisation levels used for all reported final results.}
+
 \subsection{Dynamic response assessment}
 \instructionplaceholder{Required evidence}{Report the dynamic response results needed for design judgement. These may include motions, accelerations, internal forces, mooring loads, modal properties, hydroelastic response, or other quantities relevant to the concept. Interpret the results, identify governing cases, and state clearly what the model can and cannot be trusted to predict.}
+
+\subsection{Modal analysis}
+\instructionplaceholder{Required evidence}{Identify natural frequencies and mode shapes of the assembled structural model. Relate dominant modes to expected forced-response characteristics under wave and current loading. Compare computed natural frequencies with literature values where available.}
+
+\subsection{Dynamic response of the structure}
+\instructionplaceholder{Required evidence}{Present the dynamic response at key locations under the operating conditions specified in the project description. Include time histories, frequency spectra, and maximum response estimates as appropriate. Discuss the physical interpretation of the results.}
+
+\subsection{Reduced-order model response}
+\instructionplaceholder{Required evidence}{Apply the reduced-order model using a selection of relevant mode shapes. Compare the reduced-order response against the full-model solution and discuss the accuracy and efficiency of the reduction.}
+
+\subsection{Limitations and improvements}
+\instructionplaceholder{Required evidence}{State model limitations and propose concrete improvements to geometry, loading fidelity, boundary conditions, or numerical schemes for future work.}
